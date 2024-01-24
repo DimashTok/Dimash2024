@@ -188,12 +188,12 @@ print(txt) #Обратная косая черта, за которой след
 #capitalize() Преобразует первый символ в верхний регистр
 txt = "hello, and welcome to my world."
 x = txt.capitalize()
-print (x)
+print (x) #вывод
 
 #casefold() Преобразует строку в нижний регистр 
 txt = "Hello, And Welcome To My World!"
 x = txt.casefold()
-print(x)
+print(x) #вывод
 
 #center() Возвращает центрированную строку
 txt = "banana"
@@ -203,48 +203,48 @@ print(x) #вывод       banana
 #count() Возвращает количество раз, когда указанное значение встречается в строке
 txt = "I love apples, apple are my favorite fruit"
 x = txt.count("apple")
-print(x)
+print(x) #вывод 2
 
 #encode() Возвращает закодированную версию строки
 txt = "My name is Ståle"
 x = txt.encode()
-print(x)
+print(x) #вывод b'My name is St\xc3\xa5le'
 
 #endswith() Возвращает true, если строка заканчивается указанным значением
 txt = "Hello, welcome to my world."
 x = txt.endswith(".")
-print(x) 
+print(x)
 
 #expandtabs() Устанавливает размер табуляции строки
 txt = "H\te\tl\tl\to"
 x =  txt.expandtabs(2)
-print(x)
+print(x) #вывод H e l l o
 
 #find() Ищет в строке указанное значение и возвращает позицию, где оно было найдено.
 txt = "Hello, welcome to my world."
 x = txt.find("welcome")
-print(x)
+print(x) #вывод 7
 
 #format() Форматирует указанные значения в строке
 txt = "For only {price:.2f} dollars!"
-print(txt.format(price = 49))
+print(txt.format(price = 49)) #вывод For only 49.00 dollars!
 
 #format_map() Форматирует указанные значения в строке
 
 #index()Ищет в строке указанное значение и возвращает позицию, где оно было найдено.
 txt = "Hello, welcome to my world."
 x = txt.index("welcome")
-print(x)   
+print(x)    #вывод 7
 
 #isalnum() Возвращает True, если все символы в строке являются буквенно-цифровыми.
 txt = "Company12"
 x = txt.isalnum()
-print(x)
+print(x) 
 
 #isalpha() Возвращает значение True, если все символы строки находятся в алфавите.
 txt = "CompanyX"
 x = txt.isalpha()
-print(x)
+print(x) 
 
 #isascii() Возвращает значение True, если все символы в строке являются символами ascii.
 txt = "Company123"
@@ -299,77 +299,77 @@ print(x)
 #join() Присоединяет элементы итерации к концу строки
 myTuple = ("John", "Peter", "Vicky")
 x = "#".join(myTuple)
-print(x)
+print(x) #вывод John#Peter#Vicky
 
 #ljust() Возвращает версию строки, выровненную по левому краю.
 txt = "banana"
 x = txt.ljust(20)
-print(x, "is my favorite fruit.")
+print(x, "is my favorite fruit.") #вывод banana               is my favorite fruit.
 
 #lower() Преобразует строку в нижний регистр
 txt = "Hello my FRIENDS"
 x = txt.lower()
-print(x)
+print(x) #вывод hello my friends
 
 #lstrip() Возвращает версию строки с обрезкой слева
 txt = "     banana     "
 x = txt.lstrip()
-print("of all fruits", x, "is my favorite")
-
+print("of all fruits", x, "is my favorite") #вывод of all fruits banana      is my favorite
+ 
 #maketrans() Возвращает таблицу перевода, которая будет использоваться в переводах.
 txt = "Hello Sam!"
 mytable = str.maketrans("S", "P")
-print(txt.translate(mytable))
+print(txt.translate(mytable)) #вывод Hello Pam!
 
 #partition() Возвращает кортеж, в котором строка разделена на три части
 txt = "I could eat bananas all day"
 x = txt.partition("bananas")
-print(x)
+print(x) #вывод ('I could eat ', 'bananas', ' all day')
 
 #replace() Возвращает строку, в которой указанное значение заменяется указанным значением.
 txt = "I like bananas"
 x = txt.replace("bananas", "apples")
-print(x)
+print(x) #вывод I like apples
 
 #rfind() Ищет в строке указанное значение и возвращает последнюю позицию, где оно было найдено.
 txt = "Mi casa, su casa."
 x = txt.rfind("casa")
-print(x)
+print(x) #вывод 12
 
 #rindex() Ищет в строке указанное значение и возвращает последнюю позицию, где оно было найдено.
 txt = "Mi casa, su casa."
 x = txt.rindex("casa")
-print(x)
+print(x) #вывод 12
 
 #rjust() Возвращает выровненную по правому краю версию строки
 txt = "banana"
 x = txt.rjust(20)
-print(x, "is my favorite fruit.")
+print(x, "is my favorite fruit.") #вывод               banana is my favorite fruit.
 
 #rpartition() Возвращает кортеж, в котором строка разделена на три части
 txt = "I could eat bananas all day, bananas are my favorite fruit"
 x = txt.rpartition("bananas")
-print(x)
-
+print(x) #вывод ('I could eat bananas all day, ', 'bananas', ' are my favorite fruit')
+ 
 #rsplit() Разбивает строку по указанному разделителю и возвращает список
 txt = "apple, banana, cherry"
 x = txt.rsplit(", ")
-print(x)
+print(x) #вывод  ['apple', 'banana', 'cherry']
 
 #rstrip() Возвращает правильную обрезанную версию строки
 txt = "     banana     "
 x = txt.rstrip()
-print("of all fruits", x, "is my favorite")
+print("of all fruits", x, "is my favorite") #вывод of all fruits      banana is my favorite
 
 #split() Разбивает строку по указанному разделителю и возвращает список
 txt = "welcome to the jungle"
 x = txt.split()
-print(x)
-
+print(x) #вывод ['welcome', 'to', 'the', 'jungle']
+ 
 #splitlines() Разбивает строку на разрывах строк и возвращает список
 txt = "Thank you for the music\nWelcome to the jungle"
 x = txt.splitlines()
-print(x)
+print(x) #вывод ['Thank you for the music', 'Welcome to the jungle']
 
 #startswith() Возвращает true, если строка начинается с указанного значения
 txt = "Hello, welcome to my world."
@@ -379,32 +379,33 @@ print(x)
 #strip() Возвращает обрезанную версию строки
 txt = "     banana     "
 x = txt.strip()
-print("of all fruits", x, "is my favorite")
+print("of all fruits", x, "is my favorite") #вывод of all fruits banana is my favorite
 
 #swapcase() Меняет регистры, нижний регистр становится прописным и наоборот.
 txt = "Hello My Name Is PETER"
 x = txt.swapcase()
-print(x)
-
+print(x) #вывод hELLO mY nAME iS peter
+ 
 #title() Преобразует первый символ каждого слова в верхний регистр.
 txt = "Welcome to my world"
 x = txt.title()
-print(x)
+print(x) #вывод Welcome To My World
 
 #translate() Возвращает переведенную строку
 #используйте словарь с кодами ascii, чтобы заменить 83 (S) на 80 (P):
 mydict = {83:  80}
 txt = "Hello Sam!"
-print(txt.translate(mydict))
+print(txt.translate(mydict)) #вывод Hello Pam!
 
 #upper() Преобразует строку в верхний регистр
 txt = "Hello my friends"
 x = txt.upper()
-print(x)
+print(x) #вывод HELLO MY FRIENDS
 
 #zfill() Заполняет строку указанным количеством значений 0 в начале
 txt = "50"
 x = txt.zfill(10)
-print(x)
+print(x) #вывод 0000000050
 
 ''''''
+

@@ -22,6 +22,8 @@ a = 4
 A = "Sally"
 #A is not a
 
+''''''
+
 """
 Имя переменной должно начинаться с буквы или символа подчеркивания.
 Имя переменной не может начинаться с цифры
@@ -41,6 +43,8 @@ myVariableName = "John"
 MyVariableName = "John"
 my_variable_name = "John"
 
+''''''
+
 xx, yy, zz = "Orange", "Banana", "Cherry"
 print(xx)
 print(yy)
@@ -57,6 +61,8 @@ print(cc)
 print(vv)
 print(bb) #можно распоковать значения из набора
 
+''''''
+
 q = "Python is awesome"
 print(q) #вывод Python is awesome
 
@@ -64,7 +70,7 @@ qq = "Python"
 ww = "is"
 ee = "awesome"
 print(qq, ww, ee) #вывод Python is awesome
-print(qq + ww + ee) #вывод Python is awesome
+print(qq + ww + ee) #вывод Pythonisawesome
 
 x = 5
 y = 10
@@ -80,4 +86,40 @@ print(x + y)
 #так можно
 x = 5
 y = "John"
-print(x, y) #вывод 5
+print(x, y) #вывод 5 John
+
+''''''
+
+#Переменные, созданные вне функции (как во всех приведенных выше примерах), называются глобальными переменными.
+#Глобальные переменные могут использоваться кем угодно, как внутри функций, так и снаружи.
+x = "awesome"
+
+def myfunc():
+  print("Python is " + x)
+myfunc()
+
+#есть гобальные и локальные переменные, глобальная не смотря на локальную не меняется
+#тоесть х=1 в глобальном, и х=2 в локальном то глобальная не поменяется
+
+x = "awesome"
+
+def myfunc():
+  x = "fantastic"
+  print("Python is " + x)
+myfunc()
+print("Python is " + x)
+
+#Чтобы создать глобальную переменную внутри функции надо использовать global ключевое слово
+def myfunc():
+  global x
+  x = "fantastic"
+myfunc()
+print("Python is " + x)
+
+#исользовать global ключевое слово в функций для изменения глобальной переменной
+x = "awesome"
+def myfunc():
+  global x
+  x = "fantastic"
+myfunc()
+print("Python is " + x)
